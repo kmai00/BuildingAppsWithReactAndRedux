@@ -8,7 +8,7 @@ class LoadingDots extends React.Component{
 
   componentDidMount(){
     this.interval = setInterval(() =>{
-      this.setState({
+      this.setState({ //eslint-disable-line
         frame: this.state.frame + 1
       });
     }, this.props.interval);
@@ -33,7 +33,7 @@ LoadingDots.defaultProps = {
   interval: 300, dots: 3
 };
 
-LoadingDots.PropTypes = {
+LoadingDots.propTypes = {
   interval: PropTypes.number,
   dots: PropTypes.number
 };
